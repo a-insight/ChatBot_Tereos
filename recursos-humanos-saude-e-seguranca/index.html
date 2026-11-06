@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Tereos</title>
+    <link rel="icon" href="img/avatar.png" type="image/png">
+    <!--google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--Css-->
+    <link rel="stylesheet" href="css/style.css?v=1.4">
+
+</head>
+
+<body>
+    <div class="main">
+        <section class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 logo">
+                        <img class="img-fluid imgLogo1" src="img/logo-tereos.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chat">
+            <div class="container container-chat">
+
+                <div class="row step-1">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-9 col-md-7">
+                            <p><b><span>LUCIA</span></b><br>Olá, eu sou a Lucia, a assistente virtual do RH da Tereos. Estamos muito felizes em saber que você fará parte do nosso time!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-2">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                        </div>
+                        <div class="question">
+                            <p>Há uma pessoa muito especial que quer falar com você! Você pode receber uma ligação?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-3">
+                    <div class="container-answer">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p style="text-transform: uppercase"><b><span>VOCÊ</span></b><br>Clique aqui para aceitar</p><img class="btn-check"
+                                    src="img/ok.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row step-4 ">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-7">
+                            <p><b><span>LUCIA</span></b><br>Mas, antes, me ajude com uma questão! Como você gostaria de ser chamado(a)? Pode ser pelo nome, apelido... como preferir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-5">
+                    <div class="container-answer ">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p><b><span>VOCÊ</span></b><br>Escreva seu nome:</p><input id="nameField" type="text"><img
+                                    class="btn-next" src="img/next.png" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row step-6">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-7">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, agora sim, vou colocar os dois na ligação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row step-7">
+                    <div class="container-calling">
+                        <div class="col-md-12 calling">
+                            <img src="img/calling.png?v=1.0" alt="">
+                        </div>
+                        <div class="box-btn">
+                            <a class="btn-start heartbeat" href="javascript:void(0)"><img src="img/answered-call.png"
+                                    alt=""></i></a>
+                            <a class="" style="cursor: default;" href="javascript:void(0)"><img
+                                    src="img/declined-call.png" alt=""></a>
+                            <audio id="song" src=""
+                                type="audio/mpeg"></audio>
+                        </div>
+                        <div class="cron">
+                            <p id="counter">00:00:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-8">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, não te disse que era uma mensagem de uma pessoa muito especial?</p>
+                            <br>
+                            <p>Ele te fez um convite para que você aproveite este momento para conhecer melhor o nosso propósito e os nossos valores.</p>
+                            <br>
+                            <p>Por isso, separei dois vídeos para te enviar. Neste primeiro vídeo, você terá mais informações sobre a empresa e como atuamos em 15 países com excelência.</p>
+                            <br>
+                            <p>Aproveite!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="row step-9">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br>Para que você conheça mais do <b>Programa de Desenvolvimento de Sucessores</b>, eu preparei um vídeo para que você compreenda como serão os próximos passos. Aproveite!</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row step-9">
+                    <div class="container-answer ">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p>
+                                    <b><span>VOCÊ</span></b>
+                                    <br>
+                                    Vídeo
+                                </p>
+                                <img class="btn-view" src="img/view.png" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+                <div class="row step-10">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <b><span class="nameBot">LUCIA</span></b>
+                            <div class="video">
+                                <div id="player1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-11">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, que tal conhecer um pouco mais sobre a Tereos? Agora vou te enviar o segundo vídeo, para que você compreenda o significado do nosso propósito!</p>
+                            
+                            <div class="video">
+                                <div id="player"></div>
+                                <!-- <iframe id="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="CHATBOT ADECO  mp4" width="640" height="360" src="https://www.youtube.com/embed/K4TOrB7at0Y"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-12">
+                    <div class="container-answer ">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p><b><span>VOCÊ</span></b><br>Vídeo</p><img class="btn-view" src="img/view.png" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+                <div class="row step-13">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <b><span class="nameBot">LUCIA<span></b>
+                            <div class="video">
+                                <div id="player2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-14">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, como você percebeu no vídeo, cultivar é o que impulsiona nossas ações! E, para concretizar esse propósito no dia a dia, praticamos valores fortes: ousadia, colaboração, performance e pragmatismo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-15">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <!-- <img src="img/avatar.png" alt=""> -->
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br>
+                                Agora chegou a hora de compartilhar dicas práticas para facilitar sua ambientação. Para isso, preparei um <b>Guia do colaborador.</b>
+                            </p>
+                            <br>
+                            <p>Nele, você encontrará tudo o que precisa saber sobre informações de RH e Benefícios.</p>
+                            <br>
+                            <p>Minha sugestão é que você leia e salve esse material para consultas futuras.</p>
+                            <br>
+                            <p>Qualquer dúvida que você tiver, estarei sempre disponível no portal RH.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-16">
+                    <div class="container-answer ">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p><b><span>VOCÊ</span></b><br>Baixar Guia</p><img class="btn-view" src="img/ok.png" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+                <div class="row step-17">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, depois desta imersão no nosso negócio, tenho mais uma pessoa querendo desejar boas-vindas: o nosso diretor-presidente, Pierre Santoul.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-18">
+                    <div class="container-answer ">
+                        <a href="javascript:void(0)">
+                            <div class="answer">
+                                <p><b><span>VOCÊ</span></b><br>Vídeo</p><img class="btn-view" src="img/view.png" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+
+                <div class="row step-19">
+                    <div class="container-question">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <b><span class="nameBot">LUCIA<span></b>
+                            <div class="video">
+                                <div id="player3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row step-20">
+                    <div class="container-question ">
+                        <div class="col-3 col-md-1 mina">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="question col-md-11">
+                            <p><b><span>LUCIA</span></b><br><span class="username"></span>, esperamos que sua primeira experiência com a Tereos tenha sido positiva.</p>
+                            <br>
+                            <p>Desejamos que seus primeiros dias sejam especiais e que, juntos, possamos cultivar uma excelente jornada!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    </div>
+
+
+    <!--jQuery-->
+    <script src="vendor/jquery/jquery-3.4.1.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!--Js-->
+    <script src="js/main.js?v=1.9"></script>
+
+</body>
+
+</html>
