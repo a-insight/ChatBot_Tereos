@@ -124,7 +124,7 @@ $(document).ready(function () {
     _voicecall.src = 'audio/audio-tereos.mp3';
     // var _voicecall = new Audio('audio/mobile-ringtone.mp3');
     // _voicecall.src = 'audio/mobile-ringtone.mp3';
-    
+
 
     _voicecall.addEventListener('ended', (e) => {
         console.log('ended');
@@ -188,16 +188,46 @@ $(document).ready(function () {
     });
 
     $('.chat .step-16').on("click", function () {
-        $('.chat .step-17').fadeIn();
-        _scroller();
-
         const pdfPath = 'documents/guia-do-colaborador-tereos.pdf';
 
         // Verifica se o arquivo existe
         $.ajax({
             url: pdfPath,
             type: 'HEAD',
-            success: function() {
+            success: function () {
+                // Se o arquivo existir, inicia o download
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.download = pdfPath;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                setTimeout(function () {
+                    $('.chat .step-16b').fadeIn();
+                    _scroller();
+                }, 1000);
+            },
+            error: function () {
+                // Se o arquivo não existir, exibe uma mensagem de erro
+                console.log('O download falhou: o arquivo não foi encontrado.');
+            }
+        });
+
+    });
+
+    //NOVO
+    $('.chat .step-16b').on("click", function () {
+        $('.chat .step-17').fadeIn();
+        _scroller();
+
+        const pdfPath = 'documents/guia-de-orientacoes-gerais-tereos.pdf';
+
+        // Verifica se o arquivo existe
+        $.ajax({
+            url: pdfPath,
+            type: 'HEAD',
+            success: function () {
                 // Se o arquivo existir, inicia o download
                 const link = document.createElement('a');
                 link.href = pdfPath;
@@ -211,13 +241,12 @@ $(document).ready(function () {
                     _scroller();
                 }, 1000);
             },
-            error: function() {
+            error: function () {
                 // Se o arquivo não existir, exibe uma mensagem de erro
                 console.log('O download falhou: o arquivo não foi encontrado.');
             }
         });
 
-        
     });
 
     $('.chat .step-18').on("click", function () {
@@ -368,7 +397,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //https://www.youtube.com/watch?v=WYswnr-rzA4
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player1', {
-       // height: '360',
+        // height: '360',
         width: '100%',
         videoId: 'WYswnr-rzA4',
         playerVars: {
